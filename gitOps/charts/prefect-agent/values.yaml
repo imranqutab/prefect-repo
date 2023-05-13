@@ -1,0 +1,63 @@
+agent:
+  affinity: {}
+  apiConfig: cloud
+  cloudApiConfig:
+    accountId: ''
+    apiKeySecret:
+      key: key
+      name: prefect-api-key
+    cloudUrl: https://api.prefect.cloud/api
+    workspaceId: ''
+  clusterUid: ''
+  config:
+    http2: true
+    prefetchSeconds: 10
+    queryInterval: 5
+    workPool: ''
+    workQueues: []
+  containerSecurityContext:
+    allowPrivilegeEscalation: false
+    readOnlyRootFilesystem: true
+    runAsNonRoot: true
+    runAsUser: 1001
+  extraContainers: []
+  extraEnvVars: []
+  extraEnvVarsCM: ''
+  extraEnvVarsSecret: ''
+  extraVolumeMounts: []
+  extraVolumes: []
+  image:
+    debug: false
+    prefectTag: 2.10.9-python3.10
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    repository: prefecthq/prefect
+  nodeSelector: {}
+  podAnnotations: {}
+  podLabels: {}
+  podSecurityContext:
+    fsGroup: 1001
+    runAsNonRoot: true
+    runAsUser: 1001
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 256Mi
+  serverApiConfig:
+    apiUrl: http://127.0.0.1:4200/api
+  tolerations: []
+commonAnnotations: {}
+commonLabels: {}
+fullnameOverride: prefect-agent
+nameOverride: ''
+namespaceOverride: ''
+role:
+  extraPermissions: []
+serviceAccount:
+  annotations: {}
+  create: true
+  name: ''
