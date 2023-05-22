@@ -49,7 +49,7 @@ worker:
 
   ## connection settings
   # -- one of 'cloud' or 'server'
-  apiConfig: "cloud"
+  apiConfig: "server"
 
   cloudApiConfig:
     # -- prefect account ID
