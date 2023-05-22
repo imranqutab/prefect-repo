@@ -1,6 +1,6 @@
 agent:
   affinity: {}
-  apiConfig: cloud
+  apiConfig: server
   cloudApiConfig:
     accountId: ''
     apiKeySecret:
